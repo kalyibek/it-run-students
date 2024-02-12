@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<img src="{{ student.photo.url }}" alt="{{ student.first_name }}">
+<h2>Name: {{ student.first_name }} {{ student.last_name }}</h2>
+<h2>Age: {{ student.age }}</h2>
+<p>{{ student.characteristics }}</p>
+<a href="{% url 'student_delete' student.id %}">DELETE</a>
+</body>
+</html>
