@@ -22,6 +22,13 @@
     <label for="file">Select:</label>
     <input type="file" id="file" name="photo">
     <br>
+    <label for="klass">Class:</label>
+    <select name="klass" id="klass">
+        {% for klass in klasses %}
+            <option value="{{ klass.id }}">{{ klass }}</option>
+        {% endfor %}
+    </select>
+    <br>
     <input type="submit" value="Create">
 </form>
 </body>
