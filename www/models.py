@@ -2,7 +2,9 @@ import os
 from django.db import models
 from django.conf import settings
 
-IMAGES_ROOT = os.path.join(settings.MEDIA_ROOT, 'images')
+import os
+
+IMAGES_ROOT = os.path.relpath(os.path.join(settings.MEDIA_ROOT, 'images'))
 
 
 class Student(models.Model):
